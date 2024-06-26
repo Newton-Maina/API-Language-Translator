@@ -1,0 +1,72 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Translator Expert System{% endblock %}</title>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <!-- AOS Library for Animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" integrity="sha512-UAT66IGqDGpY0O+T2L7zDt4bZtA4C8qBtQkt6gH4hFLfSdo1bs2Ae7jz8mKfAeljGDHvP4S9ZSsJ78WmVAYJ6g==" crossorigin="anonymous" />
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img src="{% static 'images/logo.png' %}" alt="Translator Logo" class="logo-img">
+            Translator Expert System
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse navbar-dark bg-dark" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                    <a href="{% url 'translator_app:home' %}" class="nav-item{% if navbar == 'home' %}nav-item nav-link active{% endif %} nav-item nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#features" class="nav-item{% if navbar == 'features' %}nav-item nav-link active{% endif %} nav-item nav-link">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-item{% if navbar == 'about' %}nav-item nav-link active{% endif %} nav-item nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="{% url 'translator_app:translator' %}" class="nav-item{% if navbar == 'translator' %}nav-item nav-link active{% endif %} nav-item nav-link">Get Started</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+    {% block content %}
+    {% endblock %}
+
+<!-- Copyright Section -->
+<footer class="footer">
+    <div class="container mt-5">
+        <p>&copy; 2024 Translator Expert System. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- Bootstrap Bundle JS (Popper included) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+<!-- AOS Library JS for animations -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js" integrity="sha512-cJ5RmmZAt3x3APsSPyZmYMRsOkJgWzy/NxWg/Y1qo5z5QFDzUz5I5P87aIKIwz6xPnnKpFlpIbEL/CAjSj9C0Q==" crossorigin="anonymous"></script>
+<script>
+    AOS.init();
+</script>
+
+</body>
+</html>

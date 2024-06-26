@@ -1,0 +1,35 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block title %}Translation | {% endblock %}
+
+{% block content %}
+<div class="hero text-center">
+    <h1 class="display-4">Language Translator</h1>
+    <p class="lead">Your text has been successfully translated</p>
+</div>
+
+<div class="container mt-5">
+    <div class="card shadow-sm mb-4">
+        <div class="card-body">
+            <h1 class="text-center mb-4">Text Successfully Translated from {{ u_lang }} to {{ t_lang }}</h1>
+            <div class="form-group mb-4">
+                <h4 class="text-center">Original Text</h4>
+                <p class="text-center text-muted">{{ original_text }}</p>
+            </div>
+            <div class="form-group mb-4">
+                <h4 class="text-center">Translated Text</h4>
+                <p class="text-center text-success">{{ translation }}</p>
+            </div>
+            <div class="text-center mb-4">
+                <h4>Thank you for choosing our system!</h4>
+            </div>
+            <div class="text-center mb-2">
+                <a href="{% url 'translator_app:translator' %}" class="btn btn-primary btn-lg mx-2">Translate Again</a>
+                <a href="{% url 'translator_app:home' %}" class="btn btn-secondary btn-lg mx-2">Go to Home</a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

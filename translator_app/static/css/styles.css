@@ -1,0 +1,418 @@
+@import url("https://fonts.googleapis.com/css?family=Exo:500,600,700|Roboto&display=swap");
+
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+ /* Light gray background */
+    height: max-content;
+}
+
+/* Navbar Styles */
+.navbar {
+    height: 120px;
+    position: relative;
+    transition: all 0.3s ease;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+}
+
+.logo-img {
+    width: 50px; /* Adjust size as needed */
+    margin-right: 10px;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgba%288, 8, 8, 0.5%29" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
+
+.navbar-nav {
+    padding-top: 5px; /* Add some padding to the top */
+}
+
+.navbar-nav .nav-link {
+    font-size: 1.2rem;
+    margin-left: 20px;
+    color: #00bcd4;
+}
+
+.navbar-nav .nav-link.active {
+    color: #00bcd4; /* Active link color */
+}
+
+.navbar-collapse {
+    background-color: rgba(0, 0, 0, 0.1); /* Dark teal background for mobile menu */
+}
+
+/* Hero Section Styles */
+.hero {
+    background-color: #00bcd4; /* Light blue */
+    color: #fff;
+    padding: 150px 0;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.hero .btn-primary {
+    font-size: 1.2rem;
+    padding: 12px 32px;
+    border-radius: 25px;
+    background-color: #00796b; /* Dark teal */
+    border-color: #00796b;
+}
+
+.hero .btn-primary:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    border-color: #004d40;
+}
+
+.image-section{
+    height: 40px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+
+/* Features Section Styles */
+.features-section {
+    padding: 80px 0;
+    background-color: #f8f9fa; /* Light gray background */
+}
+
+.feature-item {
+    text-align: center;
+    margin-bottom: 40px;
+    background-color: #fff; /* White background */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    border-radius: 8px;
+    padding: 30px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature-item i {
+    font-size: 3rem;
+    color: #00796b; /* Teal color */
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.feature-item p {
+    font-size: 1.1rem;
+    color: #555;
+}
+
+/* About Section Styles */
+.about-section {
+    padding: 100px 0;
+}
+
+.about-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.about-section p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.about-section .img-fluid {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding: 100px 0;
+    background-color: #f0f0f0; /* Light gray background */
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.contact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+}
+
+.contact-section .btn-outline-primary {
+    font-size: 1.2rem;
+    padding: 12px 32px;
+    border-radius: 25px;
+    border-color: #00796b; /* Teal color */
+    color: #00796b;
+}
+
+.contact-section .btn-outline-primary:hover {
+    background-color: #00796b; /* Teal color on hover */
+    color: #fff;
+}
+
+/* Translator Page Styles */
+.container {
+    margin-top: 10px;
+}
+
+form {
+    margin-top: 30px;
+}
+
+.form-group h4 {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    box-shadow: none;
+    border-radius: 0;
+    background: #f4f9fc;
+    height: 55px;
+    border-color: rgba(0, 0, 0, 0.05);
+}
+
+textarea.form-control {
+    height: auto;
+}
+
+input[type="email"], input[type="password"], input[type="text"], input[type="tel"] {
+    box-shadow: none;
+    height: 45px;
+    outline: none;
+    font-size: 14px;
+}
+
+input[type="email"]:focus, input[type="password"]:focus, input[type="text"]:focus, input[type="tel"]:focus {
+    box-shadow: none;
+    border: 1px solid #223a66;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid #223a66;
+}
+
+.logsign-form {
+    margin-top: 40px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.info {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Translation Result Page Styles */
+.translation-result-page {
+    padding-top: 80px;
+    text-align: center;
+
+}
+
+.translation-result-page .hero {
+    color: #fff;
+}
+
+.translation-result-page .hero h1 {
+    font-size: 3.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.translation-result-page .hero p {
+    font-size: 1.5rem;
+    margin-bottom: 40px;
+}
+
+.translation-result-page .container {
+    margin-top: 30px;
+}
+
+.translation-result-page .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.translation-result-page .card-body {
+    padding: 30px;
+}
+
+.translation-result-page h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.translation-result-page .form-group {
+    margin-bottom: 20px;
+}
+
+.translation-result-page h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.translation-result-page p {
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.translation-result-page .text-muted {
+    color: #777;
+}
+
+.translation-result-page .text-success {
+    color: #28a745; /* Green color for success text */
+}
+
+.translation-result-page .btn-container {
+    margin-top: 30px;
+}
+
+.translation-result-page .btn-container .btn {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    padding: 12px 32px;
+    border-radius: 25px;
+}
+
+.translation-result-page .btn-primary {
+    background-color: #00796b; /* Dark teal */
+    border-color: #00796b;
+    color: #fff;
+}
+
+.translation-result-page .btn-primary:hover {
+    background-color: #004d40; /* Darker teal on hover */
+    border-color: #004d40;
+}
+
+.translation-result-page .btn-secondary {
+    background-color: #6c757d; /* Gray */
+    border-color: #6c757d;
+    color: #fff;
+}
+
+.translation-result-page .btn-secondary:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+    border-color: #5a6268;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #333; /* Dark background */
+    color: #fff;
+    text-align: center;
+    padding: 5px;
+}
+
+.footer p {
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    .navbar-brand {
+        font-size: 1.5rem;
+    }
+    .navbar-nav .nav-link {
+        margin-left: 15px;
+        font-size: 1rem;
+    }
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .hero p {
+        font-size: 1.3rem;
+    }
+    .feature-item h3 {
+        font-size: 1.8rem;
+    }
+    .feature-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0, 0.1); /* Dark teal background for mobile menu */
+    }
+    .navbar-toggler-icon {
+        background-color: #fff; /* White color for hamburger icon */
+    }
+    .navbar-nav .nav-link {
+        margin-left: 10px;
+        font-size: 1rem;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .hero p {
+        font-size: 1.2rem;
+    }
+    .feature-item {
+        margin-bottom: 30px;
+    }
+    .feature-item h3 {
+        font-size: 1.5rem;
+    }
+    .feature-item p {
+        font-size: 0.9rem;
+    }
+    .about-section .img-fluid {
+        width: 100%;
+    }
+}

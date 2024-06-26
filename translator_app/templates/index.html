@@ -1,0 +1,95 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block title %}Home | Translator Expert System{% endblock %}
+
+{% block content %}
+
+<section id="home" class="hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 text-center">
+                <img src="{% static 'images/logo-2.png' %}" alt="Normal" class="img-fluid">
+            </div>
+            <div class="col-md-4 text-center">
+                <h1 class="display-4" data-aos="fade-up" data-aos-duration="1000">Translate with Confidence</h1>
+                <p class="lead my-4" data-aos="fade-up" data-aos-duration="1200">Break language barriers effortlessly.</p>
+                <a href="{% url 'translator_app:translator' %}" class="btn btn-primary btn-lg" data-aos="fade-up" data-aos-duration="1400">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="image-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'images/translate-3.png' %}" alt="Normal" class="img-fluid">
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'images/translate-2.jpg' %}" alt="Normal" class="img-fluid">
+                </div>
+                <div class="col-md-4 text-center">
+                    <img src="{% static 'images/translate-3.png' %}" alt="Normal" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+<section id="features" class="features-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4" data-aos="fade-right" data-aos-duration="1000">
+                <div class="feature-item">
+                    <i class="bi bi-translate"></i>
+                    <h3>Fast Translation</h3>
+                    <p>Instantly translate text into multiple languages with high accuracy.</p>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-duration="1200">
+                <div class="feature-item">
+                    <i class="bi bi-globe"></i>
+                    <h3>Global Reach</h3>
+                    <p>Connect with people worldwide through seamless communication.</p>
+                </div>
+            </div>
+            <div class="col-lg-4" data-aos="fade-left" data-aos-duration="1000">
+                <div class="feature-item">
+                    <i class="bi bi-tools"></i>
+                    <h3>Customizable Options</h3>
+                    <p>Personalize your translation settings to suit your preferences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="about" class="about-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6" data-aos="fade-right" data-aos-duration="1000">
+                <h2>About Translator Expert System</h2>
+                <p class="lead">We are dedicated to providing a user-friendly platform for efficient language translation, ensuring clear and precise communication across borders.
+                This is just a simple API Integration test not a large website. Happy Browsing though.</p>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000">
+                <img src="{% static 'images/translate-1.jpeg' %}" alt="About Image" class="img-fluid rounded">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="contact" class="contact-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 mx-auto text-center" data-aos="zoom-in" data-aos-duration="1000">
+                <h2>Contact Us</h2>
+                <p class="lead">Have a question or feedback? Reach out to us!</p>
+                <a href="#" class="btn btn-outline-primary">Contact</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}
